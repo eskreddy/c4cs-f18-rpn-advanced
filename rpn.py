@@ -24,11 +24,11 @@ def calculate(myarg):
 
             result = function(arg1, arg2)
             if token == '+':
-                print(colored(arg1, 'green'), colored(token + str(arg2), 'green'))
+                print(colored(arg1, 'green'), colored(token + str(arg2), 'green'), colored(" = " + str(result), 'green'))
             elif token == '-':
-                print(colored(arg1, 'green'), colored(token + str(arg2), 'red'))
+                print(colored(arg1, 'green'), colored(token + str(arg2), 'red'), colored(" = " + str(result), 'green'))
             elif token == '*':
-                print(colored(arg1, 'green'), colored(token + str(arg2), 'green'))
+                print(colored(arg1, 'green'), colored(token + str(arg2), 'green'), colored(" = " + str(result), 'green'))
             elif token == '/':
                 print(colored(arg1, 'green'), colored(token + " " + str(arg2), 'red'), colored(" = " + str(result), 'green'))
             stack.append(result)
