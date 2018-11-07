@@ -30,7 +30,7 @@ def calculate(myarg):
             elif token == '*':
                 print(colored(arg1, 'green'), colored(token + str(arg2), 'green'))
             elif token == '/':
-                print(colored(arg1, 'green'), colored(token + " " + str(arg2), 'red'), colored(" = " + str(result), 'orange'))
+                print(colored(arg1, 'green'), colored(token + " " + str(arg2), 'red'), colored(" = " + str(result), 'green'))
             stack.append(result)
         print(stack)
     if len(stack) != 1:
