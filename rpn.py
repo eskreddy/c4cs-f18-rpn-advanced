@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import operator
-
+from termcolor import colored
 
 operators = {
     '+': operator.add,
@@ -21,7 +21,16 @@ def calculate(myarg):
             function = operators[token]
             arg2 = stack.pop()
             arg1 = stack.pop()
+
             result = function(arg1, arg2)
+            if token == '+':
+                print(colored(arg1, 'green'), colored(token + arg2, 'green'))
+            elif token == '-':
+                print(colored(arg1, 'green'), colored(token + arg2, 'red'))
+            elif token == '*':
+                print(colored(arg1, 'green'), colored(token + arg2, 'green'))
+            elif token == '/':
+                print(colored(arg1, 'green'), colored(token + arg2, 'red'))
             stack.append(result)
         print(stack)
     if len(stack) != 1:
@@ -30,7 +39,7 @@ def calculate(myarg):
 
 def oi():
     print("this be poppin")
-    
+
 def main():
     while True:
         result = calculate(input("rpn calc> "))
